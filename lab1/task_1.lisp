@@ -1,0 +1,1 @@
+(format t "~A"(CAR (CDR (CAR (CDR (CAR (CDR '((1 2) (3 (4 *) 5)))))))))

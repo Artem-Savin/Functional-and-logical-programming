@@ -1,0 +1,1 @@
+(format t "~A" (APPEND NIL '(a b c)))
