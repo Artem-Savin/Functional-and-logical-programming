@@ -1,0 +1,10 @@
+(format t "~%16) Результат:~%")
+(defun cyclicShift (L n)
+    (if (eql n 0) 
+        L 
+        (cyclicShift (append (last L) (butlast L)) (- n 1))
+    )
+)
+(setq L '(d f g a s))
+(setq n 3)
+(format t "   L=~A, n=~A -> ~A~%" L n (cyclicShift L n))

@@ -1,0 +1,10 @@
+(format t "~%6) \"луковица\"Результат:~%")
+(defun onion (x n)
+    (if (eql n 0) 
+        x 
+        (list (onion x (- n 1)))
+    )
+)
+(setq x "*")
+(setq n 4)
+(format t "   x=~A, n=~A -> ~A~%" x n (onion x n))
