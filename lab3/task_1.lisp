@@ -1,0 +1,10 @@
+(defun intersectingSets (A B)
+    (cond
+    ((null A) NIL)
+    ((member (CAR A) B) T)
+    (T (intersectingSets (CDR A) B))
+    )
+)
+(setq A '(1 2))
+(setq B '(3 1 4))
+(format t "   A=~A, B=~A -> ~A~%" A B (intersectingSets A B))
